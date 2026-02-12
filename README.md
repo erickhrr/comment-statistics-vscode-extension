@@ -64,9 +64,3 @@
 
    - выполнить команду через Command Palette:  
      **Analyze Comments and TODOs**
-
----
-
-## Репозиторий
-
-https://github.com/erickhrr/comment-statistics-vscode-extension
