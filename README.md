@@ -41,26 +41,23 @@
 
 ---
 
-## Запуск расширения
+## Установка
 
-1. Установить зависимости:
-   ```bash
+1. Клонировать репозиторий:
+   git clone https://github.com/erickhrr/comment-statistics-vscode-extension.git
+
+2. Перейти в папку проекта:
+   cd comment-statistics-vscode-extension
+
+3. Установить зависимости:
    npm install
-   ```
 
-2. Выполнить компиляцию:
-   ```bash
+4. Выполнить компиляцию:
    npm run compile
-   ```
 
-3. Запустить расширение:
-   - Нажать **F5** в VS Code
+5. Запустить расширение:
+   Нажать F5 в VS Code
 
-4. В открывшемся окне **Extension Development Host**:
+6. В открывшемся окне **Extension Development Host**:
    - открыть любой файл
    - нажать **Ctrl + Alt + T**
-   
-   или
-
-   - выполнить команду через Command Palette:  
-     **Analyze Comments and TODOs**
