@@ -2,7 +2,7 @@ import * as vscode from "vscode";
 
 function isCommentLine(line: string): boolean {
   const t = line.trim();
-  // Простейшие маркеры комментариев (универсально для многих языков)
+  // Маркеры комментариев
   return (
     t.startsWith("//") ||
     t.startsWith("#") ||
@@ -17,7 +17,7 @@ function extractTodos(text: string): { line: number; text: string }[] {
   const lines = text.split(/\r?\n/);
   const todos: { line: number; text: string }[] = [];
 
-  // Ищем TODO / FIXME / NOTE / HACK (часто просят в отчётах)
+  // Ищем TODO / FIXME / NOTE / HACK
   const re = /\b(TODO|FIXME|NOTE|HACK)\b[:]?\s*(.*)$/i;
 
   for (let i = 0; i < lines.length; i++) {
@@ -55,7 +55,7 @@ export function activate(context: vscode.ExtensionContext) {
         `Статистика файла: строк всего ${totalLines}, строк-комментариев ${commentLines}, TODO/FIXME/NOTE/HACK: ${todos.length}`
       );
 
-      // 2) Показ списка TODO (если есть)
+      // 2) Показ списка TODO если есть
       if (todos.length === 0) {
         return;
       }
